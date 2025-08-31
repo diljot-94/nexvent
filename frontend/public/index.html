@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexVent - Event Booking Platform</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h2><i class="fas fa-calendar-alt"></i> NexVent</h2>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#events" class="nav-link">Events</a>
+        </li>
+        <li class="nav-item">
+          <a href="#create" class="nav-link">Create Event</a>
+        </li>
+        <li class="nav-item login-link">
+          <a href="login.html" class="nav-link">Login</a>
+        </li>
+        <li class="nav-item register-link">
+          <a href="register.html" class="nav-link">Register</a>
+        </li>
+      </ul>
+      <!-- Profile Circle (hidden by default, shown after login) -->
+      <li class="nav-item profile-menu" style="display:none;">
+        <div class="profile-circle" id="profileCircle">
+          <img id="profileImg" src="https://ui-avatars.com/api/?name=User" alt="Profile" />
+        </div>
+        <div class="profile-dropdown" id="profileDropdown">
+          <label>
+            <span>Edit Name</span>
+            <input type="text" id="editName" />
+          </label>
+          <label>
+            <span>Edit Mobile</span>
+            <input type="text" id="editMobile" />
+          </label>
+          <label>
+            <span>Add Image</span>
+            <input type="file" id="editImage" accept="image/*" />
+          </label>
+          <button id="saveProfile">Save</button>
+          <button id="logoutBtn" style="margin-top: 12px; width: 100%; background: linear-gradient(45deg, #dc3545, #c82333); color: white; border: none; padding: 10px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.2s;">Logout</button>
+        </div>
+      </li>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Discover Amazing Events</h1>
+      <p>Book tickets for the hottest events happening around you</p>
+      <button class="cta-button" onclick="window.location='#events'">
+        Explore Events <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+    <div class="hero-image">
+      <div class="floating-card">
+        <i class="fas fa-ticket-alt"></i>
+        <span>Live Events</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events Section -->
+  <section id="events" class="events-section">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-grid" id="events-list">
+        <!-- Events will be dynamically loaded here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Create Event Section -->
+  <section id="create" class="create-section">
+    <div class="container">
+      <h2 class="section-title">Create New Event</h2>
+      <a href="create-event.html" class="submit-btn" style="max-width:300px;margin:auto;display:block;text-align:center;">
+        <i class="fas fa-plus"></i> Go to Create Event
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><i class="fas fa-calendar-alt"></i> NexVent</h3>
+          <p>Your premier event booking platform</p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#create">Create Event</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Contact</h4>
+          <p><i class="fas fa-envelope"></i> nexvent@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +91 7696701967</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 NexVent. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
